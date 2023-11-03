@@ -14,21 +14,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   NotificationTicket.init({
-    subject:{ 
+    subject:
+    { 
     type:  DataTypes.STRING,
     allowNull:false ,
     },
-    content:{ 
+    content:
+    { 
       type:  DataTypes.STRING,
-      allowNull:false },
-    recepientEmail: { 
+      allowNull:false 
+    },
+    recepientEmail: 
+    { 
       type:  DataTypes.STRING,
-      allowNull:false },
-    status:{ 
+      allowNull:false 
+    },
+    status:
+    { 
       type:DataTypes.ENUM,
       allowNull:false,
-    values:["PENDING","SUCCESS","FAILED"]} ,
-    notificationTime: {
+    values:["PENDING","SUCCESS","FAILED"],
+    defaultValue:"PENDING"
+  } ,
+    notificationTime: 
+    {
      type: DataTypes.DATE,
      allowNull:false ,
   }
